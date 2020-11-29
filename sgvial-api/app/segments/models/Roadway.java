@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table
 @Entity
-public class RoadWay {
+public class Roadway {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

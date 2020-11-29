@@ -27,7 +27,7 @@ public class Segment {
     private Nomenclature nomenclature;
 
     @OneToMany(mappedBy = "segment", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    private List<RoadWay> roadways;
+    private List<Roadway> roadways;
 
     @OneToMany(mappedBy = "segment", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<Curb> curbs;

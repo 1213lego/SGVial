@@ -1,21 +1,21 @@
 package segments.repositories;
 
 import play.db.jpa.JPAApi;
-import segments.models.RoadWay;
+import segments.models.Roadway;
 
 import javax.inject.Inject;
 
-public class RoadWayRepositoryImpl implements RoadWayRepository {
+public class RoadwayRepositoryImpl implements RoadwayRepository {
     private final JPAApi jpaApi;
 
     @Inject
-    public RoadWayRepositoryImpl(JPAApi jpaApi) {
+    public RoadwayRepositoryImpl(JPAApi jpaApi) {
         this.jpaApi = jpaApi;
     }
 
     @Override
-    public Class<RoadWay> getEntityType() {
-        return RoadWay.class;
+    public Class<Roadway> getEntityType() {
+        return Roadway.class;
     }
 
     @Override

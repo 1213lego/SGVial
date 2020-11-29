@@ -28,5 +28,6 @@ public class Nomenclature {
     @ToString.Exclude
     @OneToOne
     @JoinColumn(name = "segment_id", nullable = false)
+    @MapsId
     private Segment segment;
 }

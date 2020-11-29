@@ -11,7 +11,7 @@ import segments.mappers.SegmentMapper;
 import segments.models.Segment;
 import segments.repositories.CurbRepository;
 import segments.repositories.NomenclatureRepository;
-import segments.repositories.RoadWayRepository;
+import segments.repositories.RoadwayRepository;
 import segments.repositories.SegmentRepository;
 
 import javax.inject.Inject;
@@ -29,13 +29,13 @@ public class SegmentServiceImpl implements SegmentService {
     private final NomenclatureRepository nomenclatureRepository;
     private final DatabaseExecutionContext executionContext;
     private final CurbRepository curbRepository;
-    private final RoadWayRepository roadWayRepository;
+    private final RoadwayRepository roadWayRepository;
 
     @Inject
     public SegmentServiceImpl(JPAApi jpaApi,
                               SegmentRepository segmentRepository,
                               NomenclatureRepository nomenclatureRepository,
-                              DatabaseExecutionContext executionContext, CurbRepository curbRepository, RoadWayRepository roadWayRepository) {
+                              DatabaseExecutionContext executionContext, CurbRepository curbRepository, RoadwayRepository roadWayRepository) {
         this.jpaApi = jpaApi;
         this.segmentRepository = segmentRepository;
         this.nomenclatureRepository = nomenclatureRepository;

@@ -9,7 +9,7 @@ import segments.dto.CreateRoadWayDto;
 import segments.dto.CreateSegmentDto;
 import segments.models.Curb;
 import segments.models.Nomenclature;
-import segments.models.RoadWay;
+import segments.models.Roadway;
 import segments.models.Segment;
 
 import java.util.List;
@@ -50,10 +50,10 @@ public class CreateSegmentMappers {
                         .build()).collect(Collectors.toList());
     }
 
-    public static List<RoadWay> crateRoadWayDtoToRoadWay(List<CreateRoadWayDto> roadWays, final Segment segment) {
+    public static List<Roadway> crateRoadWayDtoToRoadWay(List<CreateRoadWayDto> roadWays, final Segment segment) {
         return roadWays
                 .stream()
-                .map(createRoadWayDto -> RoadWay.builder()
+                .map(createRoadWayDto -> Roadway.builder()
                         .mdr(createRoadWayDto.getMdr())
                         .iri(createRoadWayDto.getIri())
                         .opi(createRoadWayDto.getOpi())
