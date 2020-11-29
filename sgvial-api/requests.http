@@ -1,0 +1,46 @@
+### features
+GET http://localhost:9000/features
+
+### states
+GET http://localhost:9000/states
+
+### road-types
+GET http://localhost:9000/road-types
+
+### surfaces
+GET http://localhost:9000/surfaces
+
+### create segment
+POST http://localhost:9000/segments
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 3,
+  "roadTypeId": 1,
+  "length": 200.00,
+  "stratum": 3,
+  "generatingPathId": 3,
+  "generatingPathNumber": "50",
+  "crossFromId": 1,
+  "crossFromNumber": "1",
+  "crossUpId": 1,
+  "crossUpNumber": "1+1200",
+  "roadways": [
+    {
+      "mdr": 39.54,
+      "opi": 57.70,
+      "iri": 6.22,
+      "surfaceId": 2,
+      "featureId": 8
+    }
+  ],
+  "curbs": [
+    {
+      "stateId": 3,
+      "length": 685.04,
+      "order": 2,
+      "conditionIndex": 40.32
+    }
+  ]
+}

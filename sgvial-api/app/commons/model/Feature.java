@@ -1,4 +1,4 @@
-package models;
+package commons.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,16 +13,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table
 @Entity
-public class Curb {
+public class Feature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne
-    private State state;
-    @ManyToOne
-    private Segment segment;
-    private Double length;
-    @Column(name = "\"order\"")
-    private Integer order;
-    private Double conditionIndex;
+    private Short id;
+    @Column(nullable = false, length = 30)
+    private String name;
 }

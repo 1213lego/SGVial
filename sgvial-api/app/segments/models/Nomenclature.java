@@ -1,9 +1,7 @@
-package models;
+package segments.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import commons.model.RoadType;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -17,9 +15,6 @@ public class Nomenclature {
     @Id
     @Column(name = "segment_id")
     private Long segmentId;
-    @OneToOne
-    @JoinColumn(name = "segment_id", nullable = false)
-    private Segment segment;
     @ManyToOne
     private RoadType generatingPath;
     private String generatingPathNumber;
@@ -29,4 +24,9 @@ public class Nomenclature {
     @ManyToOne
     private RoadType crossUp;
     private String crossUpNumber;
+
+    @ToString.Exclude
+    @OneToOne
+    @JoinColumn(name = "segment_id", nullable = false)
+    private Segment segment;
 }

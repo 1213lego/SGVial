@@ -1,11 +1,13 @@
-package models;
+package segments.models;
 
+import commons.model.RoadType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Builder
 @Data
@@ -20,6 +22,13 @@ public class Segment {
     private RoadType roadType;
     private Double length;
     private Short stratum;
-    @OneToOne(mappedBy = "segment")
+
+    @OneToOne(mappedBy = "segment", cascade = CascadeType.PERSIST, optional = false)
     private Nomenclature nomenclature;
+
+    @OneToMany(mappedBy = "segment", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    private List<RoadWay> roadways;
+
+    @OneToMany(mappedBy = "segment", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    private List<Curb> curbs;
 }

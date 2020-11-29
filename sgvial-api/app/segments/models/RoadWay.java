@@ -1,9 +1,8 @@
-package models;
+package segments.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import commons.model.Feature;
+import commons.model.Surface;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -21,6 +20,7 @@ public class RoadWay {
     private Double opi;
     private Double iri;
     @ManyToOne
+    @ToString.Exclude
     private Segment segment;
     @ManyToOne
     private Surface surface;
