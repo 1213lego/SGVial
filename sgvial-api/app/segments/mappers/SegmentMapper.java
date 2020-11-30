@@ -19,6 +19,7 @@ public class SegmentMapper {
                 .roadTypeId(segment.getRoadType().getId())
                 .length(segment.getLength())
                 .stratum(segment.getStratum())
+                .roadTypeName(segment.getRoadType().getName())
                 .build();
     }
 }

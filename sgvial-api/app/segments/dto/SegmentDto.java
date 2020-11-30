@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class SegmentDto {
     private Long id;
     private Short roadTypeId;
+    private String roadTypeName;
     private Double length;
     private Short stratum;
 }
