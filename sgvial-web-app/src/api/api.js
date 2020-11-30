@@ -15,6 +15,10 @@ class Api {
         });
         return response.data;
     }
+    async post(path, body) {
+        const response = await this.httpClient.post(path, body);
+        return response.data;
+    }
 }
 
 export default new Api();

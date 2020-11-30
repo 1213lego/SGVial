@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Header} from 'semantic-ui-react';
-import SegmentsTable from '../components/segments-table';
+import SegmentsTable from '../components/segments/segments-table';
 
 export default function Segments() {
     return (

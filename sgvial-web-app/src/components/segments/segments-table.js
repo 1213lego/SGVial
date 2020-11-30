@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Icon, Menu, Table} from 'semantic-ui-react';
 import {useDispatch, useSelector} from "react-redux";
-import {getSegmentsPage} from "../redux/actions/segments-actions";
+import {getSegmentsPage} from "../../redux/actions/segments-actions";
+import {Link} from "react-router-dom";
 
 function SegmentsTable(props) {
     const dispatch = useDispatch();
@@ -57,6 +58,7 @@ function SegmentsTable(props) {
                 <Table.Row>
                     <Table.HeaderCell colSpan='4'>
                         <Button
+                            as={Link} to="/segments/add-segment"
                             floated='right'
                             icon
                             labelPosition='left'

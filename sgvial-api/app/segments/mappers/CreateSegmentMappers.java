@@ -12,7 +12,9 @@ import segments.models.Nomenclature;
 import segments.models.Roadway;
 import segments.models.Segment;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class CreateSegmentMappers {
@@ -40,7 +42,8 @@ public class CreateSegmentMappers {
     }
 
     public static List<Curb> createCurbDtoToCurb(List<CreateCurbDto> curbs, final Segment segment) {
-        return curbs.stream()
+        return Optional.ofNullable(curbs)
+                .orElse(new ArrayList<>()).stream()
                 .map((curb) -> Curb.builder()
                         .conditionIndex(curb.getConditionIndex())
                         .length(curb.getLength())
@@ -51,7 +54,8 @@ public class CreateSegmentMappers {
     }
 
     public static List<Roadway> crateRoadWayDtoToRoadWay(List<CreateRoadWayDto> roadWays, final Segment segment) {
-        return roadWays
+        return Optional.ofNullable(roadWays)
+                .orElse(new ArrayList<>())
                 .stream()
                 .map(createRoadWayDto -> Roadway.builder()
                         .mdr(createRoadWayDto.getMdr())
