@@ -13,7 +13,7 @@ export function getSegmentsPage(page, pageSize) {
     return async dispatch => {
         const segmentsPage = await api.get('/segments', {
             page,
-            pageCount: pageSize
+            pageSize
         });
         dispatch(setSegmentPage(segmentsPage))
     }

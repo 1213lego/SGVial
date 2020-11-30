@@ -14,4 +14,6 @@ public interface SegmentService {
     CompletionStage<Void> create(CreateSegmentDto createSegmentDto);
 
     CompletionStage<Page<List<SegmentDto>>> findAll(int page, int pageSize);
+
+    CompletionStage<SegmentDto> findById(Long id);
 }

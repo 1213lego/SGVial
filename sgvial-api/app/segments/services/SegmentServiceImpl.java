@@ -2,6 +2,7 @@ package segments.services;
 
 import config.DatabaseExecutionContext;
 import exceptions.ResourceConflictException;
+import exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import play.db.jpa.JPAApi;
 import repositories.core.Page;
@@ -63,6 +64,17 @@ public class SegmentServiceImpl implements SegmentService {
                 .supplyAsync(
                         () -> segmentRepository.findAll(page, pageSize)
                                 .map(SegmentMapper::segmentsToSegmentDto),
+                        executionContext
+                );
+    }
+
+    @Override
+    public CompletionStage<SegmentDto> findById(Long id) {
+        return CompletableFuture
+                .supplyAsync(
+                        () -> segmentRepository
+                                .findById(id).map(SegmentMapper::segmentToSegmentDto)
+                                .orElseThrow(() -> new ResourceNotFoundException("Segmento", id)),
                         executionContext
                 );
     }

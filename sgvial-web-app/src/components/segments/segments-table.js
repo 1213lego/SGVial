@@ -9,7 +9,7 @@ function SegmentsTable(props) {
     const [pageIndex, setPageIndex] = useState(0);
     const segmentsPage = useSelector(state => state.segmentsPage).toObject();
     useEffect(() => {
-        dispatch(getSegmentsPage(pageIndex, 30));
+        dispatch(getSegmentsPage(pageIndex, 20));
     }, [pageIndex]);
     const segments = segmentsPage.results || [];
     const totalPages = (segmentsPage.totalPages || 0) + 1;

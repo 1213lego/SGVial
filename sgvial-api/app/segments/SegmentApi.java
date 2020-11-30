@@ -43,4 +43,13 @@ public class SegmentApi extends Controller {
                 );
 
     }
+
+    public CompletionStage<Result> findById(Long id) {
+        return segmentService
+                .findById(id).thenApplyAsync(
+                        segmentPage -> ok(Json.toJson(segmentPage)),
+                        executionContext.current()
+                );
+
+    }
 }
