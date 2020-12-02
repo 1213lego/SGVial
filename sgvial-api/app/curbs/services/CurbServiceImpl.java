@@ -1,11 +1,14 @@
 package curbs.services;
 
+import commons.model.State;
 import config.DatabaseExecutionContext;
 import curbs.dto.CreateCurbDto;
 import curbs.dto.CurbDto;
+import curbs.dto.UpdateCurbDto;
 import curbs.mappers.CurbMapper;
 import curbs.model.Curb;
 import curbs.repositories.CurbRepository;
+import exceptions.ResourceNotFoundException;
 import play.db.jpa.JPAApi;
 import segments.models.Segment;
 import segments.services.SegmentService;
@@ -48,11 +51,39 @@ public class CurbServiceImpl implements CurbService {
     }
 
     @Override
-    public CompletionStage<List<CurbDto>> findAllBySegmentId(Long id) {
+    public CompletionStage<List<CurbDto>> findAllBySegmentId(Long segmentId) {
         return CompletableFuture
-                .supplyAsync(() -> curbRepository.findAllBySegmentId(id)
+                .supplyAsync(() -> curbRepository.findAllBySegmentId(segmentId)
                         .stream().map(CurbMapper::curbToCurbDto)
                         .collect(Collectors.toList()), executionContext);
+    }
+
+    @Override
+    public CompletionStage<Void> update(Long curbId, UpdateCurbDto updateCurbDto) {
+        return CompletableFuture
+                .runAsync(() -> {
+                            Curb curb = curbRepository.findById(curbId)
+                                    .orElseThrow(() -> new ResourceNotFoundException("Bordillo", curbId));
+                            curb.setConditionIndex(updateCurbDto.getConditionIndex());
+                            curb.setLength(updateCurbDto.getLength());
+                            curb.setOrder(updateCurbDto.getOrder());
+                            curb.setState(State.builder()
+                                    .id(updateCurbDto.getStateId())
+                                    .build());
+                            curbRepository.update(curb);
+                        },
+                        executionContext
+                );
+    }
+
+    @Override
+    public CompletionStage<CurbDto> findById(Long curbId) {
+        return CompletableFuture
+                .supplyAsync(() -> curbRepository.findById(curbId)
+                                .map(CurbMapper::curbToCurbDto)
+                                .orElseThrow(() -> new ResourceNotFoundException("Bordillo", curbId)),
+                        executionContext
+                );
     }
 }
 

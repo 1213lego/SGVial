@@ -57,3 +57,17 @@ Content-Type: application/json
 
 ### find curbs by segment
 GET http://localhost:9000/segments/1/curbs
+
+### find curb by id
+GET http://localhost:9000/curbs/3
+
+### update curb
+PUT http://localhost:9000/curbs/3
+Content-Type: application/json
+
+{
+  "stateId": 3,
+  "length": 377.44,
+  "order": 90,
+  "conditionIndex": 11111.54534
+}
