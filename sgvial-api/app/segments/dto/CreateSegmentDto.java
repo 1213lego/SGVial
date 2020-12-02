@@ -1,5 +1,6 @@
 package segments.dto;
 
+import curbs.dto.CreateCurbDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

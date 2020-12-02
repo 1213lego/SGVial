@@ -1,6 +1,7 @@
 package segments.services;
 
 import config.DatabaseExecutionContext;
+import curbs.repositories.CurbRepository;
 import exceptions.ResourceConflictException;
 import exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +11,6 @@ import segments.dto.CreateSegmentDto;
 import segments.dto.SegmentDto;
 import segments.mappers.SegmentMapper;
 import segments.models.Segment;
-import segments.repositories.CurbRepository;
 import segments.repositories.NomenclatureRepository;
 import segments.repositories.RoadwayRepository;
 import segments.repositories.SegmentRepository;

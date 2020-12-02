@@ -1,7 +1,8 @@
-package segments.models;
+package curbs.model;
 
 import commons.model.State;
 import lombok.*;
+import segments.models.Segment;
 
 import javax.persistence.*;
 

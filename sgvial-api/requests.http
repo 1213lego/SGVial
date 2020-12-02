@@ -44,6 +44,16 @@ Accept: application/json
     }
   ]
 }
+### create curbs
+POST http://localhost:9000/segments/1/curbs
+Content-Type: application/json
 
-###
-GET http://localhost:9000/segments/343
+{
+  "stateId": 2,
+  "length": 34.44,
+  "order": 5,
+  "conditionIndex": 3433.54534
+}
+
+### find curbs by segment
+GET http://localhost:9000/segments/1/curbs

@@ -1,4 +1,4 @@
-package segments.dto;
+package curbs.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -3,13 +3,15 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET         /features            commons.CommonApi.features
-GET         /road-types          commons.CommonApi.roadTypes
-GET         /states              commons.CommonApi.states
-GET         /surfaces            commons.CommonApi.surfaces
-POST        /segments            segments.SegmentApi.create(request: Request)
-GET         /segments            segments.SegmentApi.findAll(page: Integer ?= 0, pageSize: Integer ?= 30)
-GET         /segments/:id        segments.SegmentApi.findById(id: Long)
+GET         /features                  commons.CommonApi.features
+GET         /road-types                commons.CommonApi.roadTypes
+GET         /states                    commons.CommonApi.states
+GET         /surfaces                  commons.CommonApi.surfaces
+POST        /segments                  segments.SegmentApi.create(request: Request)
+GET         /segments                  segments.SegmentApi.findAll(page: Integer ?= 0, pageSize: Integer ?= 30)
+GET         /segments/:id              segments.SegmentApi.findById(id: Long)
+POST        /segments/:id/curbs        curbs.CurbApi.create(id: Long, request: Request)
+GET         /segments/:id/curbs        curbs.CurbApi.findAll(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file              controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,6 +1,7 @@
 package segments.models;
 
 import commons.model.RoadType;
+import curbs.model.Curb;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
