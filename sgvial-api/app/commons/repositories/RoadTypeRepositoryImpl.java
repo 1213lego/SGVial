@@ -1,6 +1,6 @@
 package commons.repositories;
 
-import commons.model.RoadType;
+import commons.models.RoadType;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;

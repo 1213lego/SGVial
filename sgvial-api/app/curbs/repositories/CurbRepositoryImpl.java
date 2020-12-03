@@ -4,10 +4,6 @@ import curbs.model.Curb;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class CurbRepositoryImpl implements CurbRepository {

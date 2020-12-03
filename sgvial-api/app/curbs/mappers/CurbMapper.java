@@ -1,6 +1,6 @@
 package curbs.mappers;
 
-import commons.model.State;
+import commons.models.State;
 import curbs.dto.CreateCurbDto;
 import curbs.dto.CurbDto;
 import curbs.model.Curb;

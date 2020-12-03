@@ -1,15 +1,15 @@
 package segments.mappers;
 
-import commons.model.Feature;
-import commons.model.RoadType;
-import commons.model.State;
-import commons.model.Surface;
+import commons.models.Feature;
+import commons.models.RoadType;
+import commons.models.State;
+import commons.models.Surface;
 import curbs.dto.CreateCurbDto;
 import curbs.model.Curb;
-import segments.dto.CreateRoadWayDto;
+import roadways.models.Roadway;
+import segments.dto.CreateRoadwayDto;
 import segments.dto.CreateSegmentDto;
 import segments.models.Nomenclature;
-import segments.models.Roadway;
 import segments.models.Segment;
 
 import java.util.ArrayList;
@@ -53,16 +53,16 @@ public class CreateSegmentMappers {
                         .build()).collect(Collectors.toList());
     }
 
-    public static List<Roadway> crateRoadWayDtoToRoadWay(List<CreateRoadWayDto> roadWays, final Segment segment) {
+    public static List<Roadway> crateRoadWayDtoToRoadWay(List<CreateRoadwayDto> roadWays, final Segment segment) {
         return Optional.ofNullable(roadWays)
                 .orElse(new ArrayList<>())
                 .stream()
-                .map(createRoadWayDto -> Roadway.builder()
-                        .mdr(createRoadWayDto.getMdr())
-                        .iri(createRoadWayDto.getIri())
-                        .opi(createRoadWayDto.getOpi())
-                        .feature(Feature.builder().id(createRoadWayDto.getFeatureId()).build())
-                        .surface(Surface.builder().id(createRoadWayDto.getSurfaceId()).build())
+                .map(createRoadwayDto -> Roadway.builder()
+                        .mdr(createRoadwayDto.getMdr())
+                        .iri(createRoadwayDto.getIri())
+                        .opi(createRoadwayDto.getOpi())
+                        .feature(Feature.builder().id(createRoadwayDto.getFeatureId()).build())
+                        .surface(Surface.builder().id(createRoadwayDto.getSurfaceId()).build())
                         .segment(segment)
                         .build()).collect(Collectors.toList());
     }

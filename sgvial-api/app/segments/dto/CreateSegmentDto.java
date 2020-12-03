@@ -28,6 +28,6 @@ public class CreateSegmentDto {
     private Short crossUpId;
     private String crossUpNumber;
 
-    private List<CreateRoadWayDto> roadways;
+    private List<CreateRoadwayDto> roadways;
     private List<CreateCurbDto> curbs;
 }

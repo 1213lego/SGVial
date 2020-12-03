@@ -1,11 +1,12 @@
 package segments.models;
 
-import commons.model.RoadType;
+import commons.models.RoadType;
 import curbs.model.Curb;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import roadways.models.Roadway;
 
 import javax.persistence.*;
 import java.util.List;

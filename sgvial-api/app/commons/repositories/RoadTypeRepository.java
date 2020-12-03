@@ -1,7 +1,7 @@
 package commons.repositories;
 
 import com.google.inject.ImplementedBy;
-import commons.model.RoadType;
+import commons.models.RoadType;
 import repositories.core.JpaRepository;
 
 @ImplementedBy(RoadTypeRepositoryImpl.class)

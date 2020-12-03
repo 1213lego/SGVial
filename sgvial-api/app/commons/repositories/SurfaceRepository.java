@@ -1,7 +1,7 @@
 package commons.repositories;
 
 import com.google.inject.ImplementedBy;
-import commons.model.Surface;
+import commons.models.Surface;
 import repositories.core.JpaRepository;
 
 @ImplementedBy(SurfaceRepositoryImpl.class)

@@ -7,12 +7,12 @@ import exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import play.db.jpa.JPAApi;
 import repositories.core.Page;
+import roadways.repositories.RoadwayRepository;
 import segments.dto.CreateSegmentDto;
 import segments.dto.SegmentDto;
 import segments.mappers.SegmentMapper;
 import segments.models.Segment;
 import segments.repositories.NomenclatureRepository;
-import segments.repositories.RoadwayRepository;
 import segments.repositories.SegmentRepository;
 
 import javax.inject.Inject;

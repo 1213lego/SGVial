@@ -1,7 +1,7 @@
 package commons.repositories;
 
 import com.google.inject.ImplementedBy;
-import commons.model.State;
+import commons.models.State;
 import repositories.core.JpaRepository;
 
 @ImplementedBy(StateRepositoryImpl.class)

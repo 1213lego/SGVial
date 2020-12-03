@@ -1,6 +1,6 @@
 package commons.repositories;
 
-import commons.model.Feature;
+import commons.models.Feature;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;

@@ -1,4 +1,4 @@
-package commons.model;
+package commons.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Table
 @Entity
-public class Feature {
+public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;

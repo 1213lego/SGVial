@@ -1,10 +1,10 @@
 package commons.services;
 
 import com.google.inject.ImplementedBy;
-import commons.model.Feature;
-import commons.model.RoadType;
-import commons.model.State;
-import commons.model.Surface;
+import commons.models.Feature;
+import commons.models.RoadType;
+import commons.models.State;
+import commons.models.Surface;
 
 import java.util.List;
 import java.util.concurrent.CompletionStage;

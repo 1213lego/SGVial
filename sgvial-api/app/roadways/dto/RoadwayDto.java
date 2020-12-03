@@ -1,4 +1,4 @@
-package segments.dto;
+package roadways.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,14 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateRoadWayDto {
+public class RoadwayDto {
+    private Long id;
     private Double mdr;
     private Double opi;
     private Double iri;
+    private Long segmentId;
     private Short surfaceId;
+    private String surfaceName;
     private Short featureId;
+    private String featureName;
 }

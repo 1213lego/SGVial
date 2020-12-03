@@ -52,7 +52,7 @@ public class CurbApi extends Controller {
         return curbService.update(curbId,
                 Json.fromJson(request.body().asJson(), UpdateCurbDto.class))
                 .thenApplyAsync(
-                        (aVoid) -> new Result(created().status()),
+                        (aVoid) -> ok(),
                         executionContext.current()
                 );
     }

@@ -1,9 +1,9 @@
 package commons.services;
 
-import commons.model.Feature;
-import commons.model.RoadType;
-import commons.model.State;
-import commons.model.Surface;
+import commons.models.Feature;
+import commons.models.RoadType;
+import commons.models.State;
+import commons.models.Surface;
 import commons.repositories.FeatureRepository;
 import commons.repositories.RoadTypeRepository;
 import commons.repositories.StateRepository;

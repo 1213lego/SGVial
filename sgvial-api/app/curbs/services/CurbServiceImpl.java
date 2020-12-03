@@ -1,6 +1,6 @@
 package curbs.services;
 
-import commons.model.State;
+import commons.models.State;
 import config.DatabaseExecutionContext;
 import curbs.dto.CreateCurbDto;
 import curbs.dto.CurbDto;

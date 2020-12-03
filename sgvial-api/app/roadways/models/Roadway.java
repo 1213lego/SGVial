@@ -1,8 +1,9 @@
-package segments.models;
+package roadways.models;
 
-import commons.model.Feature;
-import commons.model.Surface;
+import commons.models.Feature;
+import commons.models.Surface;
 import lombok.*;
+import segments.models.Segment;
 
 import javax.persistence.*;
 

@@ -1,6 +1,6 @@
 package commons.repositories;
 
-import commons.model.State;
+import commons.models.State;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;

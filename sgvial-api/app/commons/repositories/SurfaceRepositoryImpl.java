@@ -1,6 +1,6 @@
 package commons.repositories;
 
-import commons.model.Surface;
+import commons.models.Surface;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;

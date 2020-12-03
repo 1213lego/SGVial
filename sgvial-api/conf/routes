@@ -3,17 +3,22 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET         /features                         commons.CommonApi.features
-GET         /road-types                       commons.CommonApi.roadTypes
-GET         /states                           commons.CommonApi.states
-GET         /surfaces                         commons.CommonApi.surfaces
-POST        /segments                         segments.SegmentApi.create(request: Request)
-GET         /segments                         segments.SegmentApi.findAll(page: Integer ?= 0, pageSize: Integer ?= 30)
-GET         /segments/:id                     segments.SegmentApi.findById(id: Long)
-POST        /segments/:segmentId/curbs        curbs.CurbApi.create(segmentId: Long, request: Request)
-GET         /segments/:segmentId/curbs        curbs.CurbApi.findAll(segmentId: Long)
-GET         /curbs/:id                        curbs.CurbApi.findById(id: Long)
-PUT         /curbs/:id                        curbs.CurbApi.update(id: Long, request: Request)
+GET         /features                            commons.CommonApi.features
+GET         /road-types                          commons.CommonApi.roadTypes
+GET         /states                              commons.CommonApi.states
+GET         /surfaces                            commons.CommonApi.surfaces
+POST        /segments                            segments.SegmentApi.create(request: Request)
+GET         /segments                            segments.SegmentApi.findAll(page: Integer ?= 0, pageSize: Integer ?= 30)
+GET         /segments/:id                        segments.SegmentApi.findById(id: Long)
+POST        /segments/:segmentId/curbs           curbs.CurbApi.create(segmentId: Long, request: Request)
+GET         /segments/:segmentId/curbs           curbs.CurbApi.findAll(segmentId: Long)
+GET         /curbs/:id                           curbs.CurbApi.findById(id: Long)
+PUT         /curbs/:id                           curbs.CurbApi.update(id: Long, request: Request)
+
+GET         /segments/:segmentId/roadways        roadways.RoadwayApi.findAll(segmentId: Long)
+POST        /segments/:segmentId/roadways        roadways.RoadwayApi.create(segmentId: Long, request: Request)
+GET         /roadways/:roadwayId                 roadways.RoadwayApi.findById(roadwayId: Long)
+PUT         /roadways/:roadwayId                 roadways.RoadwayApi.update(roadwayId: Long, request: Request)
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file                     controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file                        controllers.Assets.versioned(path="/public", file: Asset)

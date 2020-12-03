@@ -1,6 +1,6 @@
 package curbs.model;
 
-import commons.model.State;
+import commons.models.State;
 import lombok.*;
 import segments.models.Segment;
 

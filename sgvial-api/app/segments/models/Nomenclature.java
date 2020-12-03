@@ -1,6 +1,6 @@
 package segments.models;
 
-import commons.model.RoadType;
+import commons.models.RoadType;
 import lombok.*;
 
 import javax.persistence.*;

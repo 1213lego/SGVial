@@ -1,4 +1,4 @@
-package commons.model;
+package commons.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
